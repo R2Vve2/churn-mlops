@@ -1,0 +1,40 @@
+{
+  "version": "v20261117_053140",
+  "cv_results": {
+    "logistic_regression": {
+      "cv_roc_auc_mean": 0.8340268266918216,
+      "cv_roc_auc_std": 0.009214279327768,
+      "cv_pr_auc_mean": 0.7102818980133644,
+      "fit_seconds": 0.10648112297058106
+    },
+    "random_forest": {
+      "cv_roc_auc_mean": 0.8181772351647816,
+      "cv_roc_auc_std": 0.010647965564191635,
+      "cv_pr_auc_mean": 0.6778853405609336,
+      "fit_seconds": 0.893132495880127
+    },
+    "hist_gradient_boosting": {
+      "cv_roc_auc_mean": 0.818771867622243,
+      "cv_roc_auc_std": 0.010446896872835993,
+      "cv_pr_auc_mean": 0.6857702331296753,
+      "fit_seconds": 0.583922290802002
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.8380097683688543,
+    "pr_auc": 0.6948675871422859,
+    "brier": 0.16616091445715306,
+    "f1": 0.6107862248213125,
+    "precision": 0.444234404536862,
+    "recall": 0.9771309771309772,
+    "threshold": 0.145,
+    "tp": 470,
+    "fp": 588,
+    "tn": 331,
+    "fn": 11,
+    "expected_cost": 34900.0,
+    "baseline_do_nothing_cost": 240500.0,
+    "cost_saving_vs_do_nothing": 205600.0
+  },
+  "threshold": 0.145
+}

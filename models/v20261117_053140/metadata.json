@@ -1,0 +1,365 @@
+{
+  "version": "v20261117_053140",
+  "algorithm": "logistic_regression",
+  "trained_at": "2026-11-17T05:31:40.634341+00:00",
+  "package_version": "0.1.0",
+  "git_sha": null,
+  "data_fingerprint": "212e440e2eefa9e6",
+  "n_train": 5600,
+  "n_test": 1400,
+  "features": [
+    "tenure_months",
+    "monthly_charges",
+    "total_charges",
+    "num_support_tickets",
+    "num_services",
+    "contract",
+    "internet_service",
+    "payment_method",
+    "paperless_billing",
+    "tech_support",
+    "online_security",
+    "senior_citizen",
+    "partner",
+    "dependents",
+    "streaming"
+  ],
+  "threshold": 0.145,
+  "thresholds": {
+    "cost_optimal": 0.145,
+    "f1_optimal": 0.5349999999999999,
+    "min_expected_cost": 143300.0
+  },
+  "cost_assumptions": {
+    "false_negative": 500.0,
+    "false_positive": 50.0
+  },
+  "cv_results": {
+    "logistic_regression": {
+      "cv_roc_auc_mean": 0.8340268266918216,
+      "cv_roc_auc_std": 0.009214279327768,
+      "cv_pr_auc_mean": 0.7102818980133644,
+      "fit_seconds": 0.10648112297058106
+    },
+    "random_forest": {
+      "cv_roc_auc_mean": 0.8181772351647816,
+      "cv_roc_auc_std": 0.010647965564191635,
+      "cv_pr_auc_mean": 0.6778853405609336,
+      "fit_seconds": 0.893132495880127
+    },
+    "hist_gradient_boosting": {
+      "cv_roc_auc_mean": 0.818771867622243,
+      "cv_roc_auc_std": 0.010446896872835993,
+      "cv_pr_auc_mean": 0.6857702331296753,
+      "fit_seconds": 0.583922290802002
+    }
+  },
+  "test_metrics": {
+    "roc_auc": 0.8380097683688543,
+    "pr_auc": 0.6948675871422859,
+    "brier": 0.16616091445715306,
+    "f1": 0.6107862248213125,
+    "precision": 0.444234404536862,
+    "recall": 0.9771309771309772,
+    "threshold": 0.145,
+    "tp": 470,
+    "fp": 588,
+    "tn": 331,
+    "fn": 11,
+    "expected_cost": 34900.0,
+    "baseline_do_nothing_cost": 240500.0,
+    "cost_saving_vs_do_nothing": 205600.0
+  },
+  "feature_importance": {
+    "contract": 0.12414600295449041,
+    "tenure_months": 0.04439370734256479,
+    "monthly_charges": 0.028592782537287406,
+    "internet_service": 0.021331828187105634,
+    "num_support_tickets": 0.011753770594902235,
+    "tech_support": 0.01153433294347328,
+    "payment_method": 0.0075779512667434185,
+    "partner": 0.0030285789262937957,
+    "total_charges": 0.0007852813891986721,
+    "paperless_billing": 0.0006190064677550899,
+    "streaming": 0.0002856082834319512,
+    "num_services": 0.0002361216996690091,
+    "dependents": -2.0925755419759495e-05,
+    "senior_citizen": -0.00039334764579600223,
+    "online_security": -0.00039504432866788175
+  },
+  "drift_reference": {
+    "tenure_months": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        6.0,
+        10.0,
+        15.0,
+        20.0,
+        26.5,
+        34.0,
+        43.0,
+        54.0,
+        71.0,
+        Infinity
+      ],
+      "props": [
+        0.09142857142857143,
+        0.09142857142857143,
+        0.11196428571428571,
+        0.095,
+        0.11017857142857143,
+        0.09732142857142857,
+        0.1025,
+        0.09392857142857143,
+        0.10571428571428572,
+        0.10053571428571428
+      ],
+      "mean": 31.45875,
+      "std": 22.164734180554543
+    },
+    "monthly_charges": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        19.39,
+        29.6,
+        56.78,
+        64.026,
+        70.91,
+        77.924,
+        83.956,
+        88.892,
+        94.531,
+        Infinity
+      ],
+      "props": [
+        0.09982142857142857,
+        0.1,
+        0.1,
+        0.10017857142857142,
+        0.09982142857142857,
+        0.10017857142857142,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "mean": 65.23118392857143,
+      "std": 26.5164848674049
+    },
+    "total_charges": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        266.968,
+        504.21000000000004,
+        758.5799999999999,
+        1060.03,
+        1393.66,
+        1872.592,
+        2587.2860000000014,
+        3453.7619999999997,
+        4582.790000000001,
+        Infinity
+      ],
+      "props": [
+        0.10012515644555695,
+        0.09994636152333274,
+        0.09994636152333274,
+        0.09994636152333274,
+        0.09994636152333274,
+        0.10012515644555695,
+        0.09994636152333274,
+        0.09994636152333274,
+        0.09994636152333274,
+        0.10012515644555695
+      ],
+      "mean": 1970.0062971571606,
+      "std": 1689.5506371963104
+    },
+    "num_support_tickets": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        1.0,
+        2.0,
+        Infinity
+      ],
+      "props": [
+        0.3916071428571429,
+        0.3389285714285714,
+        0.2694642857142857
+      ],
+      "mean": 1.002857142857143,
+      "std": 1.061497786630009
+    },
+    "num_services": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        2.0,
+        3.0,
+        4.0,
+        Infinity
+      ],
+      "props": [
+        0.21160714285714285,
+        0.16071428571428573,
+        0.3475,
+        0.28017857142857144
+      ],
+      "mean": 2.745357142857143,
+      "std": 1.1703844976967952
+    },
+    "contract": {
+      "type": "categorical",
+      "levels": [
+        "Month-to-month",
+        "One year",
+        "Two year"
+      ],
+      "props": [
+        0.5555357142857142,
+        0.2105357142857143,
+        0.23392857142857143
+      ]
+    },
+    "internet_service": {
+      "type": "categorical",
+      "levels": [
+        "DSL",
+        "Fiber optic",
+        "No"
+      ],
+      "props": [
+        0.34017857142857144,
+        0.44821428571428573,
+        0.21160714285714285
+      ]
+    },
+    "payment_method": {
+      "type": "categorical",
+      "levels": [
+        "Electronic check",
+        "Mailed check",
+        "Bank transfer",
+        "Credit card"
+      ],
+      "props": [
+        0.3419642857142857,
+        0.21232142857142858,
+        0.22464285714285714,
+        0.22107142857142856
+      ]
+    },
+    "paperless_billing": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.58875,
+        0.41125
+      ]
+    },
+    "tech_support": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.29214285714285715,
+        0.7078571428571429
+      ]
+    },
+    "online_security": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.2757142857142857,
+        0.7242857142857143
+      ]
+    },
+    "senior_citizen": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.16410714285714287,
+        0.8358928571428571
+      ]
+    },
+    "partner": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.4705357142857143,
+        0.5294642857142857
+      ]
+    },
+    "dependents": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.30160714285714285,
+        0.6983928571428571
+      ]
+    },
+    "streaming": {
+      "type": "categorical",
+      "levels": [
+        "Yes",
+        "No"
+      ],
+      "props": [
+        0.3891071428571429,
+        0.6108928571428571
+      ]
+    },
+    "__prediction__": {
+      "type": "numeric",
+      "edges": [
+        -Infinity,
+        0.05892319882926786,
+        0.12006149645808945,
+        0.21347100246001247,
+        0.33162184090650143,
+        0.4376169761386969,
+        0.5458782391108176,
+        0.66522242885445,
+        0.7658460100756936,
+        0.8534166793774847,
+        Infinity
+      ],
+      "props": [
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "mean": 0.44640136861486407,
+      "std": 0.29226470688233064
+    },
+    "__n__": 5600
+  }
+}

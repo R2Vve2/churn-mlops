@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+mlruns/
+mlflow.db
+mlartifacts/
+data/raw/
+pip.log
+docker-build.log
+.env
+*.egg-info/
